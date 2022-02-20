@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <script>
+    function outer() {
+      const outerVar = 'hey i am outer';
+      function inner() {
+        const innerVar = 'hey i am inner';
+        console.log(outerVar);
+        console.log(innerVar);
+      }
+      return inner;
+    }
+    const innerFN = outer();
+  </script>
+</body>
+
+</html>
