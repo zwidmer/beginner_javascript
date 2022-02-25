@@ -1,5 +1,7 @@
 These are my solutions to the Wes Bos beginner Javascript course.
 
+link to exercise switch case: https://mystifying-almeida-607415.netlify.app/
+
 starting here is the original readme:
 
 ![](https://res.cloudinary.com/wesbos/image/upload/v1574876851/BJS/BJS-Social-Share.png)
