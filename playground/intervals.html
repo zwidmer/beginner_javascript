@@ -9,7 +9,25 @@
 </head>
 
 <body>
+  <script>
+    let countdownTimer;
+    function countdown(n) {
+      if (n !== 0) {
+        console.log(n);
+        countdownTimer = setTimeout(() => {
+          countdown(n - 1);
+        }, 1000);
+      } else {
+        console.log('you lost!');
+      }
+    }
 
+    countdown(10);
+    window.addEventListener('click', () => {
+      clearTimeout(countdownTimer);
+      console.log('you won!!');
+    });
+  </script>
 </body>
 
 </html>
