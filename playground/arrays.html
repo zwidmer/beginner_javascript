@@ -11,6 +11,66 @@
 </head>
 
 <body>
+  <script>
+    const names = ['wes', 'kait', 'snickers'];
+    console.log(names[1]);
+    console.log(names.length);
+    console.log(names[names.length - 1]);
+
+    names.push('lux'); // mutates original array
+    const names2 = [...names, 'max'];
+    names.unshift('puppy'); // mutates original array
+    const names3 = ['puppy', ...names];
+
+    // slice (immutable!)  and splice (mutable, take items out of original array)
+    const numbers3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    numbers3.splice(3, 2);
+    console.log(numbers3);
+
+    // mutation Method
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const numbersBackwards = numbers.reverse();
+    console.log(numbersBackwards);
+    console.log(numbers);
+    // anytime you want to use a mutation method an d not mutate the original array
+    // you need to take a copy of the array
+    const numbersReversed = [...numbers];
+
+    // immutable method
+    const numbersTwo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const pizzaSlice = numbers.slice(2, 4);
+    console.log(pizzaSlice);
+    console.log(numbersTwo);
+
+    // add item in the middle
+    const bikes = ['bianchi', 'miele', 'panasonic', 'miyata'];
+    const newBikes = [...bikes.slice(0, 2), 'benotto', ...bikes.slice(2)];
+
+    // remove item of array
+    const newBikes2 = [...newBikes.slice(0, 3), ...newBikes.slice(4)];
+
+    const comments = [
+      { text: 'cool beans', id: 123 },
+      { text: 'cool beans', id: 223 },
+      { text: 'cool beans', id: 323 },
+      { text: 'cool beans', id: 423 },
+      { text: 'cool beans', id: 523 },
+      { text: 'cool beans', id: 623 },
+    ];
+
+    function deleteComment(id, comments) {
+      // first find the index of the item in the array
+      const commentIndex = comments.findIndex((comment) => comment.id === id);
+      // make a new array without that item
+      const newComments = [
+        ...comments.slice(0, commentIndex),
+        ...comments.slice(commentIndex + 1),
+      ];
+      // return our new array
+      console.log(newComments);
+      return newComments;
+    }
+  </script>
 
 </body>
 
