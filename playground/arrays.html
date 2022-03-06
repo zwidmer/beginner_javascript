@@ -49,7 +49,7 @@
     // remove item of array
     const newBikes2 = [...newBikes.slice(0, 3), ...newBikes.slice(4)];
 
-    const comments = [
+    const someComments = [
       { text: 'cool beans', id: 123 },
       { text: 'cool beans', id: 223 },
       { text: 'cool beans', id: 323 },
@@ -67,9 +67,10 @@
         ...comments.slice(commentIndex + 1),
       ];
       // return our new array
-      console.log(newComments);
       return newComments;
     }
+
+    console.log(deleteComment(223, someComments));
   </script>
 
 </body>
