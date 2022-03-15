@@ -1,6 +1,6 @@
 These are my solutions to the Wes Bos beginner Javascript course.
 
-link to exercise switch case: https://mystifying-almeida-607415.netlify.app/
+link to exercise switch case: https://relaxed-meninsky-9ca776.netlify.app/
 
 starting here is the original readme:
 
